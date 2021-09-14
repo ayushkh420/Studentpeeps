@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Unlu2 | StudentPeeps is a platform where you get exclusive student discounts on your favourite brands
+{% endblock %}
+
+{% block linkshead %}
+
+<link rel="stylesheet" href="{% static 'css/getcode.css' %}">
+
+{% endblock %}
+
+{% block body %}
+
+<div class="prdouctimg">
+    <img class="final" src="{% static 'images/unlushoutout.png' %}" alt="">
+</div>
+<center>
+    <div class="complete">
+        <div class="brandlogo">
+            <img class="final" src="{% static 'images/unlulogo.png' %}" alt="">
+        </div>
+
+        <div class="content">
+            <h1>20% Student Discount</h1>
+            <p><a href="https://cutt.ly/snkEp6j" target="_blank">at UnluShoutout</a></p>
+        </div>
+        <div class="button d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-primary" href="/student-discount-unlu-shoutout">Get Code</a>
+        </div>
+        <hr>
+        <div class="contenttext">
+            <h4>About this student discount</h4>
+            <p>• Request celebrity video at a discount with Studentpeeps. <br>
+               • Use our UnluShoutout student discount code at the checkout. <br>
+               • Unlock 20% off on your favorite celebrity’s video booking. <br>
+               • Gift a celebrity wish to your loved ones, and make every moment special, Now!                                                 
+            </p>
+        </div>
+        <hr>
+        <div class="contenttext">
+            <h4>Terms & Conditions</h4>
+            <p>• It is applicable on every celebrity video shout/out at Unlu.io.<br>
+               • It cannot be clubbed with any other coupon/voucher. <br>
+               • Requests placed using these codes cannot be modified                               
+            </p>
+        </div>
+    </div>
+</center>
+
+
+{% endblock %}

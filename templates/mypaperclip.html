@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}StudentPeeps >> MyPaperClip{% endblock %}
+
+{% block linkshead %}
+
+<link rel="stylesheet" href="{% static 'css/getcode.css' %}">
+<style>
+    .prdouctimg {
+        background-image: radial-gradient(circle, #108285, #0d8688, #0b8a8a, #098e8d, #07928f, #06908e, #058e8e, #048c8d, #088488, #0e7b83, #15737d, #1a6b77)!important;
+    }
+</style>
+
+
+{% endblock %}
+
+{% block body %}
+
+<div class="prdouctimg">
+    <img class="final" src="{% static 'images/mypaperclip_tile.png' %}" alt="">
+</div>
+<center>
+    <div class="complete">
+        <div class="brandlogo">
+            <img class="final" src="{% static 'images/mypaperclip_logo.png' %}" alt="">
+        </div>
+
+        <div class="content">
+            <h1>15% Student Discount</h1>
+            <p><a href="https://cutt.ly/RQxV4QE" target="_blank">at MyPaperClip</a></p>
+        </div>
+        <div class="button d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-primary" href="/student-discount-mypaperclip">Get Code</a>
+        </div>
+        <hr>
+        <div class="contenttext">
+            <h4>About this student discount</h4>
+            <p>• Shop any stationery or desk accessory at a discount with Studentpeeps.<br>
+               • Use our myPaperClip student discount code at the checkout.<br>
+               • Unlock 15% off on your favorite stationery order.<br>
+               • Explore an aesthetic collection of notebooks, journals & planners, Now!
+                </p>
+        </div>
+        <hr>
+        <div class="contenttext">
+            <h4>Terms & Conditions</h4>
+            <p> • It is applicable on every classic stationery product at paperclipstore.in.<br>
+                • It cannot be clubbed with any other coupon/voucher.<br>
+                • Valid only on minimum order of Rs. 495.               
+            </p>
+        </div>
+    </div>
+</center>
+
+
+{% endblock %}

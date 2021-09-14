@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}StudentPeeps >> Student Discount Yes Done{% endblock %}
+
+{% block linkshead %}
+
+<link rel="stylesheet" href="{% static 'css/aftercode.css' %}">
+<script src="{% static 'js/aftercode.js' %}"></script>
+<style>
+    .prdouctimg {
+        background-image: radial-gradient(circle, #4b6d89, #4d7797, #4f81a4, #508bb2, #5096c0, #509ec7, #50a5cd, #51add3, #56b3d3, #5db9d2, #66bfd2, #70c5d1);
+    }
+</style>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="prdouctimg">
+    <img class="final" src="{% static 'images/yes.png' %}" alt="">
+</div>
+<center>
+    <div class="complete">
+        <div class="brandlogo">
+            <img class="final" src="{% static 'images/yesdone.png' %}" alt="">
+        </div>
+
+        <div class="_all">
+            <div class="content">
+                <h1>15% Student Discount</h1>
+                <p><a href="https://cutt.ly/tnkEld9" target="_blank">at YesDone</a></p>
+            </div>
+            <div class="copy">
+                <p>Copy code and enter on the<br>
+                    YesDone Website</p>
+            </div>
+
+            <div class="showcode" title="Copy Code" id="text" onclick="copyElementText(this.id)">YesStudents<i
+                    class="fa fa-copy" onclick="copy()"></i></div>
+            <div class="button d-grid gap-2 col-6 mx-auto">
+                <a href="https://cutt.ly/tnkEld9" target="_blank"><button class="btn btn-primary" type="button">Open
+                        Site & Use Code</button></a>
+            </div>
+            <hr>
+            <div class="contenttext">
+                <h4>About this student discount</h4>
+                <p>• Book any premium household service at a discount with Studentpeeps.<br>
+                   • Call on 9119298351.<br>
+                   • Use our YesDone student discount code.<br> 
+                   • Unlock 15% off on every service they offer.<br>
+                   • From appliance repair, to pest control, to construction & even accountancy services, book one step expert services from the comfort of your couch, Now!
+                    </p>
+            </div>
+            <hr>
+            <div class="contenttext">
+                <h4>Terms & Conditions</h4>
+                <p> • It is applicable on all services at yesdone.in<br>
+                    • It cannot be clubbed with any other coupon/voucher.<br>
+                    • Household services are limited only for Jaipur residents.<br>
+                    • Professional services are available pan India.<br>
+                    (Rolling out for other cities very soon)                
+                </p>
+            </div>
+        </div>
+    </div>
+</center>
+
+{% endblock %}

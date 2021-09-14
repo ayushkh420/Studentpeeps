@@ -1,0 +1,591 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}StudentPeeps >> Being a student is fun{% endblock %}
+
+{% block linkshead %}
+
+<style>
+    /* the newest one */
+    /* for larger screen */
+
+
+    @media only screen and (min-width: 1200px) {
+        .tiles-cards a:nth-of-type(1) {
+            grid-row: 1 / span 1 !important;
+            grid-column: 1 /span 2 !important;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .tiles-cards a:nth-of-type(4) {
+            grid-row: 2 / span 1 !important;
+            grid-column: 2 /span 2 !important;
+        }
+    }
+
+
+    @media only screen and (min-width: 1200px) {
+        .tiles-card .tiles-card-lg {
+            grid-template-columns: repeat(6, 1fr) !important;
+            grid-template-rows: repeat(6, 1fr) !important;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .tiles-card-img-lg {
+            grid-row: 1 / span 4 !important;
+            grid-column: 1 / -1 !important;
+            height: 100% !important;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .tiles-card-company-img-lg {
+            width: 110px !important;
+            left: 15% !important;
+            bottom: -80px !important;
+        }
+    }
+
+
+    @media only screen and (min-width: 1200px) {
+        .tiles-card-content-lg {
+            grid-row: 5 / span 2 !important;
+            grid-column: 2 / -1 !important;
+            padding: 0 0 !important;
+            padding-top: 20px !important;
+        }
+
+        .tiles-card-content-lg h3 {
+            margin: 0 0 !important;
+            margin-bottom: 0 !important;
+            text-align: center !important;
+        }
+
+        .tiles-card-content-lg p {
+            margin-top: 10px !important;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .section-tutorial-media {
+            order: 1;
+            padding: 10px 0 15px 0;
+        }
+
+        .section-tutorial-content {
+            order: 2;
+        }
+
+    }
+
+    @media only screen and (max-width: 786px) {
+        .section-tiles {
+            margin-top: -7em !important;
+        }
+    }
+</style>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+
+
+{% endblock %}
+
+
+{% block body %}
+
+<!-- Slider Start-->
+<section class="section-header">
+    <div class="container col-md-9">
+        <div id="slide-1" class="carousel slide " data-mdb-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <a href="/rapido">
+                        <img class="d-block w-100 scale-up-center" src="static\images\rapido_slider.png"
+                            alt="First slide">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/bookchor">
+                        <img class="d-block w-100" src="static\images\bookchor_banner.png" alt="Second slide">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/skoosh">
+                        <img class="d-block w-100" src="static\images\skoosh_slider.png" alt="Second slide">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/avni-by-giva">
+                        <img class="d-block w-100" src="static\images\slider_a1.png" alt="Third slide">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/pee-safe">
+                        <img class="d-block w-100" src="static\images\slider_p1.png" alt="Third slide">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/whole-truth-food">
+                        <img class="d-block w-100" src="static\images\slider_w1.png" alt="Third slide">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/account/login">
+                        <img class="d-block w-100" src="static\images\slide.png" alt="Third slide">
+                    </a>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#slide-1" role="button" data-bs-slide="prev">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#slide-1" role="button" data-bs-slide="next">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Slider End -->
+
+<!-- Card Slider -->
+<section class="section-feature">
+    <div class="feature-container">
+        <div class="feature-heading">
+            <h1 class="feature-sub-heading-primary">Recommended For You</h1>
+            <!-- <a href="./tiles.html" class="feature-sub-heading-primary-link">View More ></a> -->
+        </div>
+        <div class="feature-cards">
+
+            <a href="/bitclass">
+                <div class="tiles-card">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/bitclass_tile.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/bitclass_logo.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">50% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Learn any skill on a weeekend</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/bookchor">
+                <div class="tiles-card">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/bookchor.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/bookchor_logo.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">10% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Buy used books at super low prices</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/unlu-class">
+                <div class="tiles-card">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/11.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/unluclass.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">Flat 40% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Learn from your favorite Indian celebrities</p>
+                    </div>
+                </div>
+            </a>
+
+
+        </div>
+    </div>
+</section>
+<!-- Card Slider end -->
+
+<!-- Card Start -->
+<section class="section-tiles">
+    <div class="tiles-container">
+        <h1 class="tiles-heading">Featured Student Discounts</h1>
+        <div class="tiles-cards">
+
+            <a href="/rapido">
+                <div class="tiles-card tiles-card-lg" data-aos="fade-up">
+                    <div class="tiles-card-img tiles-card-img-lg">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="{% static 'images/rapido_big.png' %}">
+                            <source media="(min-width:480px)" srcset="{% static 'images/rapido_tile.png' %}">
+                            <img src="{% static 'images/rapido_tile.png' %}" alt="">
+                        </picture>
+                        <div class="tiles-card-company-img tiles-card-company-img-lg">
+                            <img src="{% static 'images/rapido_logo.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content tiles-card-content-lg">
+                        <h3 class="tiles-card-heading">50% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Book Bike taxi hassle free-anytime</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/pee-safe">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/3.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/peesafe.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">15% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Pick natural products for personal hygiene</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/unlu-shoutout">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/12.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/unlulogo.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">20% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Connect with celebrities via personalized greetings</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/avni-by-giva">
+                <div class="tiles-card tiles-card-lg" data-aos="fade-up">
+                    <div class="tiles-card-img tiles-card-img-lg">
+                        <picture>
+                            <source media="(min-width:1200px)" srcset="{% static 'images/1.png' %}">
+                            <source media="(min-width:480px)" srcset="{% static 'images/1.png' %}">
+                            <img src="{% static 'images/1.png' %}" alt="">
+                        </picture>
+                        <div class="tiles-card-company-img tiles-card-company-img-lg">
+                            <img src="{% static 'images/company2.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content tiles-card-content-lg">
+                        <h3 class="tiles-card-heading">15% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Shop amazing silver jewellery</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/whole-truth-food">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/2.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/wtf.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">25% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Making food healthy and transparent</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/the-womans-company">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/TWC_tile.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/TWC_logo.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">25% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Get menstrual wellness & hygiene products for females</p>
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="/ptal">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/ptal_tile.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/ptal_logo.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">10% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Shop handcrafted copper & brass home decor</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/mypaperclip">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/mypaperclip_tile.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/mypaperclip_logo.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">15% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Shop notebooks, planners, & more</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/naagin">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/7.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/naagin.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">15% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Try the first truly Indian hot sauce</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/to-be-honest">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/9.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/tbh.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">15% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Enjoy 100% real fruit crunchies at home</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/mittihub">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/mittihub_tiles.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/mittihub_logo.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">15% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Shop organic terracotta products</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/sattviko">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/sattviko_tile.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/sattviko_logo.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">15% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Enjoy gluten free snacks & vegan meals</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/yes-done">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/8.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/yesdone.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">15% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Get home services at your door steps</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/skoosh">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/skoosh.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/skoosh_logo.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">10% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Make café-style bubble tea at home</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/chaaryaar">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/chaaryaar.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/chaaryaar_logo.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">30% Student Discount</h3>
+                        <p class="tiles-card-paragraph">Your hunger saviour on MUJ campus</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/propshop">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/10.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/prop.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">10% Student Discount</h3>
+                        <p class="tiles-card-paragraph"> Fashion, Travel, Stationary, Gadgets & more</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/trib">
+                <div class="tiles-card" data-aos="fade-up">
+                    <div class="tiles-card-img">
+                        <img src="{% static 'images/trib_tile.png' %}" alt="">
+                        <div class="tiles-card-company-img">
+                            <img src="{% static 'images/trib.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="tiles-card-content">
+                        <h3 class="tiles-card-heading">10% Student Discount</h3>
+                        <p class="tiles-card-paragraph"> Grab your favorite customized Pride products</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- Card End -->
+
+<!-- Our Services Start-->
+<section class="section-tutorial">
+    <div class="section-tutorial-container">
+
+        <div class="section-tutorial-content">
+            <h1 class="section-tutorial-heading">Wondering how it works?</h1>
+            <p class="section-tutorial-paragraph">Every student is here, where are you???</p>
+
+            <div class="section-tutrial-cards">
+
+                <div class="section-tutorial-card">
+                    <div class="section-tutorial-card-icon">
+                        <img src="\static\images\signup_icon.png" alt="">
+                    </div>
+                    <div class="tutorial-card-detail">
+                        <h3 class="section-tutorial-sub-heading">Sign up now!</h3>
+                        <p class="section-tutorial-paragraph">Become a peep, enter your basic details such as name, date
+                            of birth and e-mail id.</p>
+                    </div>
+                </div>
+
+
+                <div class="section-tutorial-card">
+                    <div class="section-tutorial-card-icon">
+                        <img src="\static\images\verify_icon.png" alt="">
+                    </div>
+                    <div class="tutorial-card-detail">
+                        <h3 class="section-tutorial-sub-heading">Verify yourself as a student!</h3>
+                        <p class="section-tutorial-paragraph">We will verify you as a student using your college's
+                            email database instantly. You can also verify yourself by uploading your iD Card and other
+                            college documents.</p>
+                    </div>
+                </div>
+
+
+                <div class="section-tutorial-card">
+                    <div class="section-tutorial-card-icon">
+                        <img src="\static\images\enjoy_icon.jfif" alt="">
+                    </div>
+                    <div class="tutorial-card-detail">
+                        <h3 class="section-tutorial-sub-heading">You're ready to enjoy!</h3>
+                        <p class="section-tutorial-paragraph">Enjoy all the discounts on all the brands listed above.
+                            Tell your friends. Request your favourite brands to be on Studentpeeps.
+                            Make friends using our discord server , live session and student meetups. (Coming soon!)</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section-tutorial-media">
+            <video controls muted autoplay loopcontrols muted autoplay loop>
+                <source src="\static\images\signuptut.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+</section>
+<!-- Our Services End -->
+
+
+{% endblock %}
+
+
+{% block linksbody %}
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+<script type="text/javascript"
+    scr="https://cdnjs.cloudflare.com/ajax/libs/animateCSS/1.2.2/jquery.animatecss.min.js"></script>
+
+{% endblock %}
